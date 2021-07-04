@@ -1,1 +1,36 @@
-<p>pedidos works!</p>
+<table border="1">
+  <thead>
+    <tr>
+      <th>cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of pedidosData; let i = index">
+      <td>
+        <form [formGroup]="form">
+          <div formArrayName="pedidos">
+            <div *ngFor="let trabajo of pedidos.controls; let j = index">
+              <div [formGroupName]="j" *ngIf="i === j">
+                <label>Cantri:</label><br />
+                <input formControlName="cantidad" type="text" />
+              </div>
+            </div>
+          </div>
+        </form>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- <div *ngFor="let item of pedidosData; let i = index">
+  <form [formGroup]="form">
+    <div formArrayName="pedidos">
+      <div *ngFor="let trabajo of pedidos.controls; let j = index">
+        <div a *ngIf="i === j">
+          <label>Empresa:</label><br />
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+  </form>
+</div> -->
+<button (click)="verData()"></button>

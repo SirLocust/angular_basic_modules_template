@@ -7,6 +7,7 @@ import { PageDashboardComponent } from './page-dashboard/page-dashboard.componen
 import { PlantillasComponent } from './components/plantillas/plantillas.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { CategoriasComponent } from './components/categorias/categorias.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,6 @@ import { CategoriasComponent } from './components/categorias/categorias.componen
     PedidosComponent,
     CategoriasComponent,
   ],
-  imports: [CommonModule, DashboardRoutingModule],
+  imports: [CommonModule, DashboardRoutingModule, ReactiveFormsModule],
 })
 export class DashboardModule {}
